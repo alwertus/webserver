@@ -11,7 +11,10 @@ import java.io.Writer;
 import java.util.Map;
 
 /**
- * @author v.chibrikov
+ * @author Alwertus
+ *
+ * Передаём классу желаемую страницу и параметры
+ * Класс выплёвывает страницу
  */
 public class PageGenerator {
     private static final String HTML_DIR = "templates";
@@ -21,10 +24,10 @@ public class PageGenerator {
         Writer stream = new StringWriter();
         try {
             Template template = CFG.getTemplate(HTML_DIR + File.separator + filename);
-            template.process(data, stream);
+            template.process(data, stream);                                                                             // запись в stream страницы с использованием параметров data
         } catch (IOException | TemplateException e) {
             e.printStackTrace();
         }
-        return stream.toString();
+        return stream.toString();                                                                                       // возвращаем строку (страницу)
     }
 }
