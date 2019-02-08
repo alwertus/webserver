@@ -1,4 +1,4 @@
-package frontend;
+package servlets;
 
 import templater.PageGenerator;
 
@@ -11,12 +11,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author Alwertus
- *
  * Класс-обработчик GET-POST запросов
  */
 public class Frontend extends HttpServlet {
-
+    public static final String frontendPageURL = "/authform";
     private String login = "";
 
     // обработка GET запросов. Параметры передаются в строке URL
