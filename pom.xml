@@ -32,6 +32,7 @@
                     <mainClass>ru.alwertus.webserver.Main</mainClass>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 
@@ -50,6 +51,11 @@
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
             <version>9.4.14.v20181114</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.197</version>
         </dependency>
     </dependencies>
 

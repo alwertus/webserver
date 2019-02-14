@@ -1,3 +1,5 @@
+import database.DbConnection;
+import database.DbOperations;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,11 +11,17 @@ public class Main extends Application {
     private static Object t;
 
     public static void main(String[] args) {
+        // работа с БД
+        DbOperations.createTable();
+        DbOperations.fillTestData();
         // запуск сервера
         serverStarter = new ServerStarter(args);
         new Thread(serverStarter).start();
         // запуск главного окна
         launch(args);
+
+
+        System.exit(0);
     }
 
     // запуск главного окна
