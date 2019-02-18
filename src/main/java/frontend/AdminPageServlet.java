@@ -1,4 +1,4 @@
-package servlets;
+package frontend;
 
 import etc.AlwFunc;
 

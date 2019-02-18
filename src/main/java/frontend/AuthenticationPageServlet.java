@@ -1,4 +1,4 @@
-package servlets;
+package frontend;
 
 import etc.AlwFunc;
 
@@ -17,6 +17,7 @@ public class AuthenticationPageServlet extends HttpServlet {
     public static final String PAGE_URL = "/authform";
     private static final String PAGE_FILENAME = "authform.html";
     private static final String PARAMETERNAME_LOGIN = "login";
+    private static final String PARAMETERNAME_PASSWORD = "password";
     private String login = "";
 
     private String fillPageParameters() {
